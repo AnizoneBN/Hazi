@@ -1,0 +1,597 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>HAAHS | Result</title>
+    <meta charset="utf-8">
+    <meta name="description" content="School Website.">
+    <meta name="keywords" content="school,college,management,result,exam,attendace,hostel,admission,events">
+    <meta name="author" content="H.R.Shadhin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <!-- style -->
+	<link rel="stylesheet" href="/CSS/settings.css">
+
+    <link rel="shortcut icon" href="/frontend/img/favicon.png">
+
+    <link rel="stylesheet" href="/CSS/animate.css">
+    <link rel="stylesheet" href="/CSS/flag-icon.min.css">
+    <link rel="stylesheet" href="/CSS/flaticon.css">
+    <link rel="stylesheet" href="/CSS/font-awesome.css">
+    <link rel="stylesheet" href="/CSS/jquery.fancybox.css">
+    <link rel="stylesheet" href="/CSS/main.css">
+    <link rel="stylesheet" href="/CSS/owl.carousel.css">
+    <link rel="stylesheet" href="/CSS/select2.css">
+    <link rel="stylesheet" href="/CSS/sms-icon.css">
+    <link rel="stylesheet" href="/CSS/settings.css">
+    <link rel="stylesheet" href="/CSS/layers.css">
+    <link rel="stylesheet" href="/CSS/navigation.css">
+  <link rel="stylesheet" href="/src/css/flaticon.css">
+
+    <link rel="stylesheet" href="/src/css/font-awesome.css">
+
+<style>
+        /* ===== Google Font Import - Poformsins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+.container{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+   /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);*/
+    overflow: hidden;
+    margin: 0 20px;
+    height: 390px;
+}
+
+.container .forms{
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+
+.container .form{
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+    transition: margin-left 0.18s ease;
+}
+
+.container.active .login{
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signup{
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+.container.active .signup{
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.container.active .forms{
+    height: 600px;
+}
+.container .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.form .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #4070f4;
+    border-radius: 25px;
+}
+
+.form .input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid){
+    border-bottom-color: #4070f4;
+}
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+    color: #4070f4;
+}
+
+.input-field i.icon{
+    left: 0;
+}
+.input-field i.showHidePw{
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input{
+    margin-right: 10px;
+    accent-color: #4070f4;
+}
+
+.form .text{
+    color: #333;
+    font-size: 14px;
+}
+
+.form a.text{
+    color: #4070f4;
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .button{
+    margin-top: 15px;
+}
+
+.form .button input{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover{
+    background-color: #265df2;
+}
+
+.form .login-signup{
+    margin-top: 30px;
+    text-align: center;
+}
+  #detailsContainer {
+    margin-top: 20px;
+    display: none;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+</style>
+    <!--styles -->
+</head>
+
+<body>
+    <!-- page header -->
+    <header>
+        <!-- header top panel -->
+        <div class="page-header-top">
+            <div class="grid-row clear-fix">
+                <address>
+                    <a href="tel:+8801625324718" class="phone-number">
+                        <i class="fa fa-phone"></i>+8801625324718</a>
+                    <a href="mailto:haziabdulawal.school@gmail.com" class="email">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="" style="font-size: 9px;">haziabdulawal.school@gmail.com</span>
+                    </a>
+                </address>
+                <div class="header-top-panel">
+                    <a href="/login" class="fa fa-user login-icon"></a>
+                    <div id="top_social_links_wrapper">
+                        <div class="share-toggle-button">
+                            <i class="share-icon fa fa-share-alt"></i>
+                        </div>
+                        <div class="cws_social_links">
+                            <a href="https://plus.google.com/" class="cws_social_link" title="Google +">
+                                <i class="share-icon fa fa-google-plus" style="transform: matrix(0, 0, 0, 0, 0, 0);"></i>
+                            </a>
+                            <a href="https://twitter.com/" class="cws_social_link" title="Twitter">
+                                <i class="share-icon fa fa-twitter"></i>
+                            </a>
+                            <a href="https://facebook.com/" class="cws_social_link" title="Facebook">
+                                <i class="share-icon fa fa-facebook"></i>
+                            </a>
+                            <a href="https://youtube.com/" class="cws_social_link" title="Youtube">
+                                <i class="share-icon fa fa-youtube"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div id="top_lang_links_wrapper">
+                        <div class="lang-toggle-button">
+                            <i class="fa fa-language"></i>
+                        </div>
+
+                        <div class="cws_lang_links">
+                            <a href="/bn" class="cws_lang_link" title="Bangla">
+                                <i class="lang-icon flag-icon flag-icon-bd"></i>
+                            </a>
+                            <a href="/en" class="cws_lang_link" title="English">
+                                <i class="lang-icon flag-icon flag-icon-gb"></i>
+                            </a>
+                            <a href="/in" class="cws_lang_link" title="Hindi">
+                                <i class="lang-icon flag-icon flag-icon-in"></i>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- / header top panel -->
+        <!-- sticky menu -->
+        <div class="sticky-wrapper">
+            <div class="sticky-menu">
+                <div class="grid-row clear-fix">
+                    <!-- logo -->
+                    <a href="index.html" class="logo">
+                        <img src="/1717043048416.jpg" data-at2x="/IMG/logo@2x.png" alt style="Border-radius: 50px;">
+                        <h1 style="font-size: 17px; text-align: center; margin-left: 5px;">Hazi Abdul Awal High School</h1>
+                    </a>
+                    <!-- / logo -->
+                    <nav class="main-nav">
+                        <ul class="clear-fix">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="class.html">Class</a>
+                            </li>
+                            <li>
+                                <a href="teachers.html">Teachers</a>
+                            </li>
+                            <li>
+                                <a href="/HTML/results.html" class="active">Results</a>
+
+                            </li>
+                            <li>
+                                <a href="/HTML/timeline.html">Timeline</a>
+                            </li>
+                                                                               <li>
+                                <a href="/HTML/SSC_Result.html">SSC Result </a>
+                            </li>  
+
+                            <!--<li>
+                                <a href="contact-us.html">Contact Us</a>-->
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- sticky menu -->
+        <!-- page title -->
+        <div class="page-title">
+            <div class="grid-row">
+                <h1>Result</h1>
+                <nav class="bread-crumb">
+                    <a href="index.html">Home</a>
+                    <i class="fa fa-long-arrow-right"></i>
+                    <a href="#">Result</a>
+                </nav>
+            </div>
+        </div>
+        <!-- / page title -->
+    </header>
+
+
+    <div class="container" style="margin-left: -2px;">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Result</span>
+
+                <form id="myForm">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your Name" id="name" required>
+                       <i class="uil uil-envelope"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="number" class="number" placeholder="Enter your Roll" id="roll" required>
+                        <i class="uil uil-lock icon"></i>
+
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <!--<input type="checkbox" id="logCheck">-->
+                            
+                            <!--label for="logCheck" class="text">Remember me</label>-->
+                        </div>
+                        
+                        <!--<a href="#" class="text">Forgot password?</a>-->
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+<!--
+                <div class="login-signup">
+                </div>-->
+            </div>
+
+            <!-- Registration Form -->
+            <div class="form signup">
+               <!-- <span class="title">Registration</span>
+<!--
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your name" required>
+                        <i class="uil uil-user"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Create a password" required>
+                        <i class="uil uil-lock icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Confirm a password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+-->
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="termCon">
+                           <!-- <label for="termCon" class="text">I accepted all terms and conditions</label>-->
+                        </div>
+                    </div>
+<!--
+                    <div class="input-field button">
+                        <input type="button" value="Signup">
+                    </div>-->
+                </form>
+<!--
+                <div class="login-signup">
+                    <span class="text">Already a member?
+                        <a href="#" class="text login-link">Login Now</a>
+                    </span>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+    
+  <div id="detailsContainer" style="margin-top: -3px;"></div>
+  
+     <!-- / footer -->
+    	<footer>
+
+		<div class="grid-row">
+
+			<div class="grid-col-row clear-fix">
+				<section class="grid-col grid-col-4 footer-about">
+					<h2 class="corner-radius">About Us</h2>
+					<div>
+						<h3>At Hazi Abdul Awal High School, </h3>
+						<p>every student's potential is a seed, nurtured with care, to blossom into greatness</p>
+					</div>
+					<address>
+						<p></p>
+						<a href="tel:+8801625324718" class="phone-number">+8801625324718</a>
+						<br />
+						<a href="mailto:haziabdulawal.school@gmail.com" class="email">
+							<span class="">haziabdulawal.school@gmail.com</span>
+						</a>
+						<br />
+						<a href="https://www.hazi-abdul-awal-high-school.netlify.app/" class="site">www.hazi-abdul-awal-high-school.netlify.app/</a>
+						<br />
+						<a href="/contact" class="address">Kamrangir Char
+							<br/>Dhaka 1211, Bangladesh</a>
+					</address>
+
+				</section>
+				<section class="grid-col grid-col-4 footer-latest">
+					<h2 class="corner-radius">Upcoming Event</h2>
+					<article>
+						<img src="/IMG/EVENTS/realistic-eid-mubarak-greeting-card_1017-31239.jpg" data-at2x="/frontend/uploads/83x83-img-2@2x.jpg" alt>
+						<h3>
+							<a href="event-details.html">Eid Al Adha</a>
+						</h3>
+						<div class="course-date">
+							<div>10
+								<sup>30</sup>
+								<sub>AM</sub>
+							</div>
+							<div>12.08.24</div>
+						</div>
+						<p>When Eid al-Adha arrives, even the school doors take a break, embracing the spirit of celebration and joy.</p>
+					</article>
+					<article>
+						<img src="/IMG/EVENTS/final-rubber-stamp-vector-12416990.jpg" data-at2x="/frontend/uploads/83x83-img-1@2x.jpg" data-at2x="/frontend/uploads/83x83-img-1@2x.jpg" alt>
+						<h3>
+							<a href="event-details.html">Annual Examination</a>
+						</h3>
+						<div class="course-date">
+							<div>10
+								<sup>30</sup>
+								<sub>AM</sub>
+							</div>
+							<div>26.11.23</div>
+						</div>
+						<p>When final exams approach, every book becomes a guiding light, leading students towards the shores of knowledge and success.</p>
+					</article>
+				</section>
+				<section class="grid-col grid-col-4 footer-links">
+					<h2 class="corner-radius">Help Links
+						<i class="site"></i>
+					</h2>
+					<ul class="clear-fix">
+						<!--<li>
+							<a href="faq.html">FAQ</a>
+						</li>
+						<li>
+							<a href="admission.html">Admission</a>
+						</li>-->
+						<li>
+							<a href="results.html">Results</a>
+						</li>
+						<li>
+							<a href="timeline.html">Timeline</a>
+
+						</li>
+						<!--
+						<li>
+							<a href="gallery.html">Gallery</a>
+						</li>
+
+						<li>
+							<a href="contact-us.html">Contact Us</a>
+						</li>-->
+					</ul>
+				</section>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="grid-row clear-fix">
+				<div class="copyright">Hazi Abdul Awal High School 
+					<br><span>2024 All Rights Reserved
+				</div>
+
+				<div class="footer-social">
+					<a href="#" class="fa fa-google-plus"></a>
+					<a href="#" class="fa fa-twitter"></a>
+					<a href="https://www.facebook.com/profile.php?id=100056157426438" class="fa fa-facebook"></a>
+					<a href="#" class="fa fa-youtube"></a>
+				</div>
+
+				<div class="maintainedby">Maintained by
+					<a href="http://shanixlab.com" class="site">AnizoneBN</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+     <script src="script.js"></script> 
+
+<script>
+  document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission from reloading the page
+
+    const name = document.getElementById('name').value;
+    const roll = document.getElementById('roll').value;
+
+    // Fetch JSON data from another file
+    fetch('/JSON/Results.json')
+      .then(response => response.json())
+      .then(data => {
+        // Find the entry with the matching roll number
+        const entry = data.results.find(item => item.Roll === roll);
+
+        // Display details if found, otherwise show error message
+        if (entry) {
+          displayDetails(entry);
+        } else {
+          displayErrorMessage();
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+
+    // Hide form container
+    document.querySelector('.container').style.display = 'none';
+  });
+
+  function displayDetails(entry) {
+    // Create and populate table with details
+    const table = document.createElement('table');
+    table.innerHTML = `
+      <tr><th>Name</th><td>${entry.Name}</td></tr>
+      <tr><th>Roll</th><td>${entry.Roll}</td></tr>
+      <tr><th>Father's Name</th><td>${entry.FathersName}</td></tr>
+      <tr><th>Mother's Name</th><td>${entry.MothersName}</td></tr>
+      <tr><th>Mobile Number</th><td>${entry.MobileNumber}</td></tr>
+      <tr><th>Exam Name</th><td>${entry.ExamName}</td></tr>
+      <tr><th>Bangla</th><td>${entry.Bangla}</td></tr>
+      <tr><th>English</th><td>${entry.English}</td></tr>
+      <tr><th>Math</th><td>${entry.Math}</td></tr>
+      <tr><th>Science</th><td>${entry.Science}</td></tr>
+      <tr><th>Bangladesh and Global Introduction</th><td>${entry["Bangladesh and global introduction"]}</td></tr>
+      <tr><th>Islam</th><td>${entry.Islam}</td></tr>
+      <tr><th>Information & Technology</th><td>${entry["Information & Technology"]}</td></tr>
+    `;
+
+    // Append table to details container
+    const detailsContainer = document.getElementById('detailsContainer');
+    detailsContainer.innerHTML = ''; // Clear previous content
+    detailsContainer.appendChild(table);
+    detailsContainer.style.display = 'block'; // Show details container
+  }
+
+  function displayErrorMessage() {
+    // Show error message
+    const errorMessage = document.createElement('p');
+    errorMessage.textContent = 'No details found for the provided roll number.';
+    document.getElementById('detailsContainer').appendChild(errorMessage);
+    document.getElementById('detailsContainer').style.display = 'block'; // Show details container
+  }
+</script>
+</body>
+
+</html>

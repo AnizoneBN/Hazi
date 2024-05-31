@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .news-item {
+            margin-bottom: 40px;
+        }
+        .news-image {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .news-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        .news-description {
+            font-size: 16px;
+            color: #555;
+        }
+        .search-container {
+            margin-bottom: 20px;
+        }
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search news...">
+        </div>
+        <div class="news-items">
+            <!-- News articles will be dynamically added here -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.querySelector('.news-items');
+            const searchInput = document.getElementById('searchInput');
+
+            function displayNews(articles) {
+                container.innerHTML = ''; // Clear previous news articles
+
+                articles.forEach(article => {
+                    const newsItem = document.createElement('div');
+                    newsItem.classList.add('news-item');
+
+                    const image = document.createElement('img');
+                    image.src = article.imageUrl;
+                    image.alt = 'News Image';
+                    image.classList.add('news-image');
+
+                    const title = document.createElement('h2');
+                    title.textContent = article.title;
+                    title.classList.add('news-title');
+
+                    const description = document.createElement('p');
+                    description.textContent = article.description;
+                    description.classList.add('news-description');
+
+                    newsItem.appendChild(image);
+                    newsItem.appendChild(title);
+                    newsItem.appendChild(description);
+
+                    container.appendChild(newsItem);
+                });
+            }
+
+            fetch("your_server_url/news_data.json") // Replace "your_server_url" with the actual URL of your JSON file
+                .then(response => response.json())
+                .then(data => {
+                    const newsArticles = data.newsArticles;
+                    displayNews(newsArticles);
+
+                    // Add event listener for search input
+                    searchInput.addEventListener('input', function() {
+                        const searchTerm = this.value.toLowerCase();
+                        const filteredArticles = newsArticles.filter(article =>
+                            article.title.toLowerCase().includes(searchTerm) ||
+                            article.description.toLowerCase().includes(searchTerm)
+                        );
+                        displayNews(filteredArticles);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        });
+    </script>
+</body>
+</html>
